@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "@app/services/data.service";
-import { Observable, tap} from "rxjs";
+import {debounceTime, filter, map, Observable, pluck, switchMap, tap} from "rxjs";
 import { IPaginationViewModel } from "@app/models/pagination.interface";
 
 @Component({
@@ -11,17 +11,34 @@ import { IPaginationViewModel } from "@app/models/pagination.interface";
 export class BodyComponent implements OnInit {
   totalPages = 0;
   pageSize = 6;
-
   data$: Observable<IPaginationViewModel>
 
   constructor(public dataService: DataService) {}
 
+  private page: number;
+  private query: string;
+
   ngOnInit(): void {
-    this.dataService.currentPage$.pipe().subscribe(page => this.dataloader(page));
+    this.dataService.currentPage$.subscribe(page => {
+      this.page = page;
+      this.dataloader();
+    })
+
+    this.dataService.searchPage$.pipe(
+      filter((searchTerm: string) => {
+        return (
+          searchTerm.trim().length >= 1
+        );
+      }),
+      debounceTime(500),
+    ).subscribe(searchQuery => {
+      this.query = searchQuery;
+      this.dataloader();
+    })
   }
 
-  private dataloader(page: number) {
-    this.data$ = this.dataService.list(this.pageSize, page).pipe(
+  private dataloader() {
+    this.data$ = this.dataService.list(this.pageSize, this.page, { q: this.query }).pipe(
       tap(x => this.totalPages = x.totalResults / this.pageSize),
     );
   }

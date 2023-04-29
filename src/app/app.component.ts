@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+    <div class="container bg-light">
+      <app-body></app-body>
+    </div>
+  `
 })
-export class AppComponent {
-  title = 'kissmybutton';
-}
+export class AppComponent {}

@@ -1,0 +1,26 @@
+<div class="d-flex align-items-center pb-4">
+  <div class="text me-3">displaying page</div>
+  <div class="paginator">
+    <div class="input-group">
+      <span class="input-group-text">
+         <a class="btn btn-link btn-sm" [ngClass]="{ 'disabled': currentPage === 1 }" aria-label="Previous" (click)="prev()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+          </svg>
+         </a>
+      </span>
+      <input type="number" min="1" class="form-control" [(ngModel)]="currentPage"  (ngModelChange)="onChangePage($event)">
+      <span class="input-group-text">
+         <a class="btn btn-link btn-sm" [ngClass]="{ 'disabled': currentPage === totalPage }" aria-label="Next" (click)="next()">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+         </a>
+      </span>
+    </div>
+  </div>
+  <div class="text ms-3 me-3">of <a class="link">{{totalPage | formatNumber}}</a></div>
+</div>
+
+
+

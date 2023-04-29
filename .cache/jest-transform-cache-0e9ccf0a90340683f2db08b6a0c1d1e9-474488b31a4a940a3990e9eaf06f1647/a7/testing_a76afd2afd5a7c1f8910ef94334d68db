@@ -1,0 +1,176 @@
+aab6c5f922ef8c3ad1122a8f80e4f188
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var testing_exports = {};
+__export(testing_exports, {
+  RouterTestingModule: () => RouterTestingModule,
+  setupTestingRouter: () => setupTestingRouter,
+  setupTestingRouterInternal: () => setupTestingRouterInternal
+});
+module.exports = __toCommonJS(testing_exports);
+var import_common = require("@angular/common");
+var import_testing = require("@angular/common/testing");
+var i0 = __toESM(require("@angular/core"), 1);
+var import_core = require("@angular/core");
+var import_router = require("@angular/router");
+/**
+ * @license Angular v14.3.0
+ * (c) 2010-2022 Google LLC. https://angular.io/
+ * License: MIT
+ */
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+const EXTRA_ROUTER_TESTING_PROVIDERS = [];
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+function isUrlHandlingStrategy(opts) {
+  return "shouldProcessUrl" in opts;
+}
+function setupTestingRouterInternal(urlSerializer, contexts, location, compiler, injector, routes, titleStrategy, opts, urlHandlingStrategy, routeReuseStrategy) {
+  return setupTestingRouter(urlSerializer, contexts, location, compiler, injector, routes, opts, urlHandlingStrategy, routeReuseStrategy, titleStrategy);
+}
+function setupTestingRouter(urlSerializer, contexts, location, compiler, injector, routes, opts, urlHandlingStrategy, routeReuseStrategy, titleStrategy) {
+  const router = new import_router.Router(null, urlSerializer, contexts, location, injector, compiler, (0, import_router.\u0275flatten)(routes));
+  if (opts) {
+    if (isUrlHandlingStrategy(opts)) {
+      router.urlHandlingStrategy = opts;
+    } else {
+      (0, import_router.\u0275assignExtraOptionsToRouter)(opts, router);
+    }
+  }
+  if (urlHandlingStrategy) {
+    router.urlHandlingStrategy = urlHandlingStrategy;
+  }
+  if (routeReuseStrategy) {
+    router.routeReuseStrategy = routeReuseStrategy;
+  }
+  router.titleStrategy = titleStrategy;
+  return router;
+}
+class RouterTestingModule {
+  static withRoutes(routes, config) {
+    return {
+      ngModule: RouterTestingModule,
+      providers: [
+        (0, import_router.provideRoutes)(routes),
+        { provide: import_router.ROUTER_CONFIGURATION, useValue: config ? config : {} }
+      ]
+    };
+  }
+}
+RouterTestingModule.\u0275fac = i0.\u0275\u0275ngDeclareFactory({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: RouterTestingModule, deps: [], target: i0.\u0275\u0275FactoryTarget.NgModule });
+RouterTestingModule.\u0275mod = i0.\u0275\u0275ngDeclareNgModule({ minVersion: "14.0.0", version: "14.3.0", ngImport: i0, type: RouterTestingModule, exports: [import_router.RouterModule] });
+RouterTestingModule.\u0275inj = i0.\u0275\u0275ngDeclareInjector({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: RouterTestingModule, providers: [
+  import_router.\u0275ROUTER_PROVIDERS,
+  EXTRA_ROUTER_TESTING_PROVIDERS,
+  { provide: import_common.Location, useClass: import_testing.SpyLocation },
+  { provide: import_common.LocationStrategy, useClass: import_testing.MockLocationStrategy },
+  {
+    provide: import_router.Router,
+    useFactory: setupTestingRouterInternal,
+    deps: [
+      import_router.UrlSerializer,
+      import_router.ChildrenOutletContexts,
+      import_common.Location,
+      import_core.Compiler,
+      import_core.Injector,
+      import_router.ROUTES,
+      import_router.TitleStrategy,
+      import_router.ROUTER_CONFIGURATION,
+      [import_router.UrlHandlingStrategy, new import_core.Optional()],
+      [import_router.RouteReuseStrategy, new import_core.Optional()]
+    ]
+  },
+  (0, import_router.\u0275withPreloading)(import_router.NoPreloading).\u0275providers,
+  (0, import_router.provideRoutes)([])
+], imports: [import_router.RouterModule] });
+i0.\u0275\u0275ngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.3.0", ngImport: i0, type: RouterTestingModule, decorators: [{
+  type: import_core.NgModule,
+  args: [{
+    exports: [import_router.RouterModule],
+    providers: [
+      import_router.\u0275ROUTER_PROVIDERS,
+      EXTRA_ROUTER_TESTING_PROVIDERS,
+      { provide: import_common.Location, useClass: import_testing.SpyLocation },
+      { provide: import_common.LocationStrategy, useClass: import_testing.MockLocationStrategy },
+      {
+        provide: import_router.Router,
+        useFactory: setupTestingRouterInternal,
+        deps: [
+          import_router.UrlSerializer,
+          import_router.ChildrenOutletContexts,
+          import_common.Location,
+          import_core.Compiler,
+          import_core.Injector,
+          import_router.ROUTES,
+          import_router.TitleStrategy,
+          import_router.ROUTER_CONFIGURATION,
+          [import_router.UrlHandlingStrategy, new import_core.Optional()],
+          [import_router.RouteReuseStrategy, new import_core.Optional()]
+        ]
+      },
+      (0, import_router.\u0275withPreloading)(import_router.NoPreloading).\u0275providers,
+      (0, import_router.provideRoutes)([])
+    ]
+  }]
+}] });
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var spy_ng_module_factory_loader = {};
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */

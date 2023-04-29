@@ -1,0 +1,200 @@
+cac47c5093d251e56064aca3d9ed168e
+"use strict";
+
+/* istanbul ignore next */
+function cov_1mmc0c8z13() {
+  var path = "C:\\Users\\User\\Desktop\\kissmybutton\\src\\app\\app.component.ts";
+  var hash = "16ba55afd14cdf796bd07a5a87809ea386dcac54";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "C:\\Users\\User\\Desktop\\kissmybutton\\src\\app\\app.component.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 0
+        },
+        end: {
+          line: 3,
+          column: 30
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 16
+        },
+        end: {
+          line: 4,
+          column: 32
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 15
+        },
+        end: {
+          line: 5,
+          column: 39
+        }
+      },
+      "4": {
+        start: {
+          line: 6,
+          column: 19
+        },
+        end: {
+          line: 10,
+          column: 1
+        }
+      },
+      "5": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 36
+        }
+      },
+      "6": {
+        start: {
+          line: 11,
+          column: 0
+        },
+        end: {
+          line: 16,
+          column: 17
+        }
+      },
+      "7": {
+        start: {
+          line: 17,
+          column: 0
+        },
+        end: {
+          line: 17,
+          column: 36
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 18
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "C:\\Users\\User\\Desktop\\kissmybutton\\src\\app\\app.component.ts",
+      mappings: ";;;;AAAA,wCAA0C;IAO7B,YAAY,SAAZ,YAAY;;QACvB,UAAK,GAAG,cAAc,CAAC;IACzB,CAAC;CAAA,CAAA;AAFY,YAAY;IALxB,IAAA,gBAAS,EAAC;QACT,QAAQ,EAAE,UAAU;QACpB,yCAAmC;KAEpC,CAAC;GACW,YAAY,CAExB;AAFY,oCAAY",
+      names: [],
+      sources: ["C:\\Users\\User\\Desktop\\kissmybutton\\src\\app\\app.component.ts"],
+      sourcesContent: ["import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'kissmybutton';\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "16ba55afd14cdf796bd07a5a87809ea386dcac54"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1mmc0c8z13 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+
+cov_1mmc0c8z13();
+cov_1mmc0c8z13().s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+/* istanbul ignore next */
+cov_1mmc0c8z13().s[1]++;
+exports.AppComponent = void 0;
+const tslib_1 =
+/* istanbul ignore next */
+(cov_1mmc0c8z13().s[2]++, require("tslib"));
+const core_1 =
+/* istanbul ignore next */
+(cov_1mmc0c8z13().s[3]++, require("@angular/core"));
+
+/* istanbul ignore next */
+cov_1mmc0c8z13().s[4]++;
+let AppComponent = class AppComponent {
+  constructor() {
+    /* istanbul ignore next */
+    cov_1mmc0c8z13().f[0]++;
+    cov_1mmc0c8z13().s[5]++;
+    this.title = 'kissmybutton';
+  }
+
+};
+
+/* istanbul ignore next */
+cov_1mmc0c8z13().s[6]++;
+AppComponent = tslib_1.__decorate([(0, core_1.Component)({
+  selector: 'app-root',
+  template: require("./app.component.html")
+})], AppComponent);
+
+/* istanbul ignore next */
+cov_1mmc0c8z13().s[7]++;
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFPYTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFQYjtBQUFBO0FBQUE7Ozs7SUFPYUEsWUFBWSxTQUFaQSxZQUFZOzs7OztJQUN2QixhQUFRLGNBQVI7RUFDRDs7QUFGd0I7Ozs7QUFBWkEsWUFBWSx1QkFMeEIsc0JBQVU7RUFDVEMsUUFBUSxFQUFFLFVBREQ7RUFFVEM7QUFGUyxDQUFWLENBS3dCLEdBQVpGLFlBQVksQ0FBWjs7OztBQUFBRyIsIm5hbWVzIjpbIkFwcENvbXBvbmVudCIsInNlbGVjdG9yIiwidGVtcGxhdGUiLCJleHBvcnRzIl0sInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxVc2VyXFxEZXNrdG9wXFxraXNzbXlidXR0b25cXHNyY1xcYXBwXFxhcHAuY29tcG9uZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdhcHAtcm9vdCcsXG4gIHRlbXBsYXRlVXJsOiAnLi9hcHAuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9hcHAuY29tcG9uZW50LnNjc3MnXVxufSlcbmV4cG9ydCBjbGFzcyBBcHBDb21wb25lbnQge1xuICB0aXRsZSA9ICdraXNzbXlidXR0b24nO1xufVxuIl19

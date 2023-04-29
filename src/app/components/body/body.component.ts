@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from "@app/services/data.service";
-import {debounceTime, filter, map, Observable, pluck, switchMap, tap} from "rxjs";
+import {debounceTime, filter, Observable, tap} from "rxjs";
 import { IPaginationViewModel } from "@app/models/pagination.interface";
 
 @Component({
